@@ -62,10 +62,12 @@ int main(){
 	
 	//矩阵运算
 	//四则运算直接使用对应的运算符
-	
+	matrix_3_3 = Eigen::Matrix3d::Random();//生成一个随机的3维矩阵
+	cout << matrix_3_3 << endl << endl;	
 
-
-
+	//转置矩阵
+	cout << matrix_3_3.transpose() << endl << endl;
+	cout << matrix_3_3 << endl << endl;
 	return 0;
 }
 
