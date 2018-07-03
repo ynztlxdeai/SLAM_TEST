@@ -63,11 +63,23 @@ int main(){
 	//矩阵运算
 	//四则运算直接使用对应的运算符
 	matrix_3_3 = Eigen::Matrix3d::Random();//生成一个随机的3维矩阵
+	cout << "随机矩阵" << endl;
 	cout << matrix_3_3 << endl << endl;	
 
 	//转置矩阵
+	cout << "转置矩阵" << endl;
 	cout << matrix_3_3.transpose() << endl << endl;
-	cout << matrix_3_3 << endl << endl;
+//	cout << matrix_3_3 << endl << endl;
+	cout << "各个元素的和" << endl;
+	cout << matrix_3_3.sum() << endl << endl ;			//各个元素的和
+	cout << "矩阵 迹" << endl;
+	cout << matrix_3_3.trace()	<< endl << endl;		//迹
+	cout << "数乘" << endl;
+	cout << matrix_3_3 * 10 << endl << endl ;			//数乘
+	cout << "矩阵 逆" << endl;
+	cout << matrix_3_3.inverse() << endl << endl;		//逆
+	cout << "行列式" << endl;
+	cout << matrix_3_3.determinant() << endl << endl;	//行列式
 	return 0;
 }
 
