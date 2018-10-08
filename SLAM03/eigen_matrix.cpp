@@ -80,6 +80,13 @@ int main(){
 	cout << matrix_3_3.inverse() << endl << endl;		//逆
 	cout << "行列式" << endl;
 	cout << matrix_3_3.determinant() << endl << endl;	//行列式
+
+	//特征值
+	//实对称矩阵可以保证对角化成功
+	Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> eigen_solver(matrix_3_3.transpose() * matrix_3_3);
+	cout << "eigen value = " << eigen_solver.eigenvalues() << endl;
+	cout << "eigen vectors = " << eigen_solver.eigenvectors() << endl;
+
 	return 0;
 }
 
